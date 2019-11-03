@@ -4,20 +4,21 @@ const app = express();
 
 app.set('view engine', 'ejs');
 app.use(express.static("views"));
+
 app.get("/home", function(req, res){
-  res.render("home.ejs");
+  res.render("home");
 });
 
 app.get("/protect", function(req, res){
-  res.render("protect.ejs");
+  res.render("protect");
 });
 
 app.get("/topFam", function(req, res){
-  res.render("topFam.ejs");
+  res.render("topFam");
 });
 
 app.get("/antiVirus", function(req, res){
-  res.render("antiVirus.ejs");
+  res.render("antiVirus");
 });
 
 app.listen(process.env.PORT, process.env.IP, function(){
